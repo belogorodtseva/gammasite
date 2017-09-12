@@ -1,0 +1,102 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block headin %}
+
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" type = "text/css"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="swiper">
+<!-- Swiper -->
+ <div class="swiper-container">
+     <div class="swiper-wrapper">
+
+       <div class="swiper-slide" ><img src="{% static 'img/01.jpg' %}"></div>
+       <div class="swiper-slide" ><img src="{% static 'img/02.jpg' %}"></div>
+       <div class="swiper-slide" ><img src="{% static 'img/03.jpg' %}"></div>
+       <div class="swiper-slide" ><img src="{% static 'img/04.jpg' %}"></div>
+       <div class="swiper-slide" ><img src="{% static 'img/02.jpg' %}"></div>
+     </div>
+     <!-- Add Pagination -->
+     <div class="swiper-pagination swiper-pagination-white"></div>
+     <!-- Add Arrows
+     <div class="swiper-button-next swiper-button-black"></div>
+     <div class="swiper-button-prev swiper-button-black"></div>-->
+ </div>
+ </div>
+
+ <div class="projects">
+
+     {% for P in Projects %}
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+           <div class="projectcontent">
+           <a class="smalla" href="/projects/">Проекты</a>
+           <a class="biga"href="{% url 'projects' %}"> {{P.name}} </a>
+         </div>
+         </div>
+
+     </div>
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+           <div class="projectcontent">
+           <a class="smalla" href="/projects/">Новости</a>
+           <a class="biga"href="{% url 'projects' %}"> {{P.name}} </a>
+         </div>
+         </div>
+
+     </div>
+     <div class="col-sm-4">
+
+         <div class="projectname">
+           <div class="projectcontent">
+           <a style="color:black; text-shadow:none;" class="smalla" href="/projects/">Новости</a>
+           <a style="color:black; text-shadow:none;" class="biga"href="{% url 'projects' %}"> {{P.name}} </a>
+         </div>
+         </div>
+
+     </div>
+
+     {% endfor %}
+
+ </div>
+
+ <div class="services">
+
+     {% for S in Services %}
+     <div class="col-sm-4 servicename">
+       <div class="serviceuno">
+           <a class="sera" href="{% url 'index' %}"> {{S.name}} </a>
+         </div>
+     </div>
+     {% endfor %}
+
+ </div>
+
+
+
+<script src="/static/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        //nextButton: '.swiper-button-next',
+        //prevButton: '.swiper-button-prev',
+
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+        paginationClickable: true,
+        // Disable preloading of all images
+        preloadImages: false,
+        // Enable lazy loading
+        lazyLoading: true
+
+    });
+</script>
+{% endblock %}

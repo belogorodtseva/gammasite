@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  {% load staticfiles %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/swiper.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/all.css' %}" type = "text/css"/>
+  <link href="http://allfont.ru/allfont.css?fonts=futuris-cyrillic" rel="stylesheet" type="text/css" />
+  <link href="http://allfont.ru/allfont.css?fonts=avantgardectt" rel="stylesheet" type="text/css" />
+
+  {% block headin %}
+  {% endblock %}
+  <style>
+  @font-face {
+
+    font-family: Archive;
+
+    src: local("Archive"),
+
+         url("{% static 'fonts/Archive typeface.otf' %}");
+
+  }
+  </style>
+</head>
+<body>
+
+  <div id="p_prldr"><center><div class="contpre">
+    <span class="svg_anm"></span>
+    <img src="{% static 'img/logo_gamma.png' %}" id = 'blabla'>
+  </div></center></div>
+
+
+  <header>
+    <div class="wrapper">
+      <div class="menubutton">
+        <img src="{% static 'img/menu.svg' %}">
+        <h1><strong>МЕНЮ</strong></h1>
+      </div>
+      <div class="logo">
+        <a href="/">
+          <img src="{% static 'img/logo_gamma.png' %}">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu">
+    <div class="wrapper">
+      <div class="closebutton"><img src="{% static 'img/close.svg' %}"></div>
+      <div class="menuwrapper">
+        <nav class="menunav">
+          <ul class="menulist">
+            <li class="menuitem">
+              <a href="/projects/">Проекты</a>
+            </li>
+            <li class="menuitem">
+              <a href="/news/">Новости</a>
+            </li>
+            <li class="menuitem">
+              <a href="/gallery/">Галерея</a>
+            </li>
+            <li class="menuitem">
+              <a href="/contact/">О нас</a>
+            </li>
+            <li class="menuitem">
+              <a href="/contact/">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="maincontect">
+
+    {% block content %}
+    {% endblock %}
+  </section>
+
+  <footer>
+    <p>footer</p>
+      <p>footer</p>
+        <p>footer</p>
+        <p>footer</p>
+          <p>footer</p>
+            <p>footer</p>
+
+  </footer>
+
+
+
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+
+
+    <!-- Initialize Swiper -->
+
+    <script>
+
+    $(document).ready(function()
+    {   if( navigator.userAgent.match(/Android/i)
+       || navigator.userAgent.match(/webOS/i)
+       || navigator.userAgent.match(/iPhone/i)
+       || navigator.userAgent.match(/iPod/i)
+       || navigator.userAgent.match(/BlackBerry/i)
+       || navigator.userAgent.match(/Windows Phone/i)
+       ){
+         $('body').addClass('mobile');
+        }
+      else if (navigator.userAgent.match(/iPad/i)) {
+        $('body').addClass('ipad');
+      }
+       else {
+         $('body').addClass('desktop');
+        }
+    });
+
+    </script>
+
+    <script>
+
+    $(document).ready(function() {
+      $('.menubutton, .menu').on('click', function() {
+        $('.menu')
+          .addClass('active')
+      });
+    });
+
+</script>
+
+
+    <script>
+
+    $(document).ready(function() {
+      $('.closebutton, .menu').on('click', function() {
+        $('.menu')
+          .removeClass('active');
+      });
+    });
+
+</script>
+
+      <!--Preloader-->
+
+  <script type="text/javascript">$(window).on('load', function () {
+    var $preloader = $('#p_prldr'),
+        $svg_anm   = $preloader.find('.svg_anm');
+    $svg_anm.fadeOut();
+    $preloader.delay(500).fadeOut('slow');
+});</script>
+
+</body>
+
+</html>
