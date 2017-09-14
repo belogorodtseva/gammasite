@@ -51,3 +51,7 @@ class Gallery(models.Model):
 
     def __str__(self):
         return self.project
+
+class Image(models.Model):
+   project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+   photo = models.FileField(null=True)

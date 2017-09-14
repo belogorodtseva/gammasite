@@ -1,0 +1,131 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block headin %}
+
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/projects.css' %}" type = "text/css"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="filter">
+  <ul class="modellist">
+  {% for M in Models %}
+    <li class="modelitem">
+      <a href="/projects/">{{M.name}}</a>
+    </li>
+    <li class="modelitem">
+      <a href="/projects/">{{M.name}}</a>
+    </li>
+    <li class="modelitem">
+      <a href="/projects/">{{M.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+ <div class="projects">
+
+     {% for P in Projects %}
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+
+           <div class="projectcontent">
+           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
+           <a class="smalla" href="/projects/">{{P.model}}</a>
+         </div>
+
+         </div>
+
+
+     </div>
+
+
+     {% endfor %}
+
+     {% for P in Projects %}
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+           <div class="projectcontent">
+           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
+           <a class="smalla" href="/projects/">{{P.model}}</a>
+         </div>
+         </div>
+
+     </div>
+
+     {% endfor %}
+
+     {% for P in Projects %}
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+           <div class="projectcontent">
+           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
+           <a class="smalla" href="/projects/">{{P.model}}</a>
+         </div>
+         </div>
+
+     </div>
+
+     {% endfor %}
+     {% for P in Projects %}
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+
+           <div class="projectcontent">
+           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
+           <a class="smalla" href="/projects/">{{P.model}}</a>
+         </div>
+
+         </div>
+
+
+     </div>
+
+
+     {% endfor %}
+
+     {% for P in Projects %}
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+           <div class="projectcontent">
+           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
+           <a class="smalla" href="/projects/">{{P.model}}</a>
+         </div>
+         </div>
+
+     </div>
+
+     {% endfor %}
+
+     {% for P in Projects %}
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+           <div class="projectcontent">
+           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
+           <a class="smalla" href="/projects/">{{P.model}}</a>
+         </div>
+         </div>
+
+     </div>
+
+     {% endfor %}
+
+
+ </div>
+
+
+{% endblock %}

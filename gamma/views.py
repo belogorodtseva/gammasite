@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from gamma.models import Projects,Models,Services,News,Gallery
+from gamma.models import Projects,Models,Services,News,Gallery,Image
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.shortcuts import get_list_or_404, get_object_or_404
@@ -17,8 +17,17 @@ def index(request):
 def projects(request):
     content = {
         'Projects' : Projects.objects.all(),
+        'Models' : Models.objects.all(),
     }
     return render(request, 'projects.html', content)
+
+def project(request, pk):
+    content = {
+        'Models' : Models.objects.all(),
+        'Project' : Projects.objects.filter(pk=pk),
+        'Image' : Image.objects.filter(project=pk),
+    }
+    return render(request, 'project.html', content)
 
 def gallery(request):
     content = {

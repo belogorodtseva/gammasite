@@ -31,6 +31,7 @@ body {
     background: #fff;
     color: #000;
     font-size: 20px;
+
 }
 
 a {
@@ -45,18 +46,22 @@ a:hover {
 }
 
 
-.desktop{
-  width: 96%;
-  margin: 2%;
-
-
+.desktop header, .desktop section{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.ipad {
-  width: 94%;
-  margin: 3%;
-  margin-top: 35px;
+header {
+  margin-top: 3%;
 }
+
+.ipad header, .ipad section{
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
 
 .mobile {
   width: 94%;
@@ -106,10 +111,11 @@ header h1:hover{
   height: 7vh;
   vertical-align: middle;
   cursor: pointer;
+  margin-top: -2vh;
 }
 
 .mobile .logo {
-  margin: -2vh;
+
   float: right;
   display: inline-block;
 }
@@ -119,7 +125,7 @@ header h1:hover{
 }
 
 .ipad .logo {
-  margin: -2vh;
+
   float: right;
   display: inline-block;
 }
@@ -234,6 +240,26 @@ bottom: 0;
 border: 3px solid black;
 
 
+
   background-color: black;
   width: 100%;
+  color: white;
+}
+
+footer p, footer h1{
+  color: white;
+
+}
+
+.footercontainer{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.numbers, .links{
+  display: inline-block;
+  width: 49%;
+  vertical-align: middle;
+  text-align: center;
 }

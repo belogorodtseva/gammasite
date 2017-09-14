@@ -1,0 +1,40 @@
+.filter ul {
+    margin-top: 30px;
+    list-style: none; /* Remove list bullets */
+    font-size: 2vh;
+    font-weight: 900;
+
+}
+
+.filter li:before {
+  display: inline-block;
+  content: '';
+  height: 1.5vh;
+  width: 1.5vh;
+  margin-right: 1.5vh;
+  margin-left: 1px;
+  border: 1px solid #000;
+}
+
+.filter li:hover::before {
+    background: #000;
+}
+
+
+.ipad .filter ul {
+    margin-top: 30px;
+    list-style: none; /* Remove list bullets */
+    font-size: 1.2vh;
+    font-weight: 900;
+
+}
+
+.ipad .filter li:before {
+  display: inline-block;
+  content: '';
+  height: 0.8vh;
+  width: 0.8vh;
+  margin-right: 0.8vh;
+  margin-left: 1px;
+  border: 1px solid #000;
+}

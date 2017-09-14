@@ -32,12 +32,49 @@
      {% for P in Projects %}
      <div class="col-sm-4">
 
-         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+         <div class="projectname" style="background-image:url({{ P.photo.url }});" >
            <div class="projectcontent">
            <a class="smalla" href="/projects/">Проекты</a>
+           <a class="biga" href="{% url 'projects' %}"> {{P.name}} </a>
+         </div>
+         </div>
+      
+
+     </div>
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});">
+           <div class="projectcontent">
+           <a class="smalla" href="/projects/">Новости</a>
            <a class="biga"href="{% url 'projects' %}"> {{P.name}} </a>
          </div>
          </div>
+
+     </div>
+     <div class="col-sm-4">
+
+         <div class="projectname">
+           <div class="projectcontent">
+           <a style="color:black; text-shadow:none;" class="smalla" href="/projects/">Новости</a>
+           <a style="color:black; text-shadow:none;" class="biga"href="{% url 'projects' %}"> {{P.name}} </a>
+         </div>
+         </div>
+
+     </div>
+
+     {% endfor %}
+
+     {% for P in Projects %}
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ P.photo.url }});" >
+           <div class="projectcontent">
+           <a class="smalla" href="/projects/">Проекты</a>
+           <a class="biga" href="{% url 'projects' %}"> {{P.name}} </a>
+         </div>
+         </div>
+
 
      </div>
 
