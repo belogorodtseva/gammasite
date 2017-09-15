@@ -21,7 +21,7 @@
 
     src: local("Archive"),
 
-         url("{% static 'fonts/Archive typeface.otf' %}");
+         url("{% static 'fonts/AvantGarde.otf' %}");
 
   }
   </style>
@@ -39,6 +39,9 @@
       <div class="menubutton">
         <img src="{% static 'img/menu.svg' %}">
         <h1><strong>МЕНЮ</strong></h1>
+
+        {% block title %}
+        {% endblock %}
       </div>
       <div class="logo">
         <a href="/">
@@ -147,7 +150,7 @@
 </script>
 
 
-    <script>
+<script>
 
     $(document).ready(function() {
       $('.closebutton, .menu').on('click', function() {

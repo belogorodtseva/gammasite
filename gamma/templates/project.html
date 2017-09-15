@@ -4,25 +4,47 @@
 {% block headin %}
 
   <link rel="stylesheet" href="{% static 'css/home.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/project.css' %}" type = "text/css"/>
+{% endblock %}
+
+{% block title %}
+&#160;|<a href="/projects/"><small>Проекты</small></a>
 {% endblock %}
 
 {% block content %}
 
-<div class="swiper">
-<!-- Swiper -->
- <div class="swiper-container">
-     <div class="swiper-wrapper">
-       {% for I in Image %}
-       <div class="swiper-slide" ><img src="{{ I.photo.url }}"></div>
-       {% endfor %}
-     </div>
-     <!-- Add Pagination -->
-     <div class="swiper-pagination swiper-pagination-white"></div>
+{% for P in Project %}
+<div class="mainphoto">
+  <img src="{{ P.photo.url }}">
+</div>
+<div class="maininfo">
+  {% if P.model %}
+    <a href="{% url 'project' pk=P.pk %}">{{ P.model }}</a>
+  {% endif %}
+  {% if P.service %}
+    <a href="{% url 'project' pk=P.pk %}">{{ P.service }}</a>
+  {% endif %}
+  <h1>{{ P.name }}</h1>
+  <div class="line"></div>
+  {% if P.text %}
 
-     <div class="swiper-button-next swiper-button-black"></div>
-     <div class="swiper-button-prev swiper-button-black"></div>
- </div>
- </div>
+    <p class="moretext" >{{ P.text }}</p>
+  {% endif %}
+
+  {% for I in Image %}
+    {% if I.photo %}
+      <div class="projectimage" ><img src="{{ I.photo.url }}"></div>
+    {% endif %}
+    {% if I.text %}
+      <div class="projecttext" ><p>{{ I.text }}</p></div>
+    {% endif %}
+
+  {% endfor %}
+
+</div>
+{% endfor %}
+<script src="/static/js/jquery.js"></script>
+
 
 
 <script src="/static/js/swiper.min.js"></script>

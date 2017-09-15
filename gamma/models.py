@@ -54,4 +54,5 @@ class Gallery(models.Model):
 
 class Image(models.Model):
    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
-   photo = models.FileField(null=True)
+   photo = models.FileField(blank=True, null=True)
+   text = models.TextField(blank=True, null=True)

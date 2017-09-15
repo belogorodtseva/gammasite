@@ -1,0 +1,149 @@
+.mainphoto img{
+  width: 100%;
+  margin-top: 3%;
+
+}
+
+.line {
+  width: 50%;
+    float: left;
+    margin-right: 49%;
+
+    height: 1vh;
+    background: #000;
+    margin-bottom: 2%;
+}
+
+.maininfo{
+  margin-top: 3%;
+}
+
+.maininfo h1 {
+  font-weight: 900;
+  font-size: 6vh;
+}
+
+.mobile .maininfo .line{
+  height: 0.5vh;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+.ipad .maininfo .line{
+  height: 0.3vh;
+  width: 100%;
+}
+
+.mobile .maininfo h1{
+  font-size: 4vh;
+}
+
+.mobile .maininfo a{
+  font-size: 2vh;
+}
+
+.mobile .projecttext p, .mobile .moretext{
+  font-size: 1.7vh;
+}
+
+
+
+
+
+.ipad .maininfo h1{
+  font-size: 3vh;
+}
+
+.ipad .maininfo a{
+  font-size: 1.5vh;
+}
+
+
+
+.maininfo a {
+  font-size: 3vh;
+}
+
+
+
+.maininfo h3:after{
+  display: inline-block;
+  content: '+';
+  margin-left: 12px;
+}
+
+.moretext{
+  margin-left: 5%;
+  margin-right: 5%;
+
+  font-size: 3vh;
+  text-indent: 1.5em; /* Отступ первой строки */
+
+}
+
+.ipad .moretext{
+  font-size: 1.5vh;
+}
+
+
+
+
+
+
+.projectimage img{
+  width: 100%;
+}
+
+
+/* content */
+
+.projectimage {
+  width: 60%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  float: left;
+}
+
+.projecttext {
+  margin-top: 10%;
+  width: 39%;
+  float: right;
+  border-bottom: 2px solid black;
+}
+
+.projecttext p{
+  width: 80%;
+  float: right;
+  font-size: 3vh;
+  text-indent: 1.5em; /* Отступ первой строки */
+
+
+}
+
+.ipad .projecttext p{
+  font-size: 1.3vh;
+  width: 85%;
+}
+
+.ipad .projecttext {
+  margin-top: 2%;
+
+}
+
+
+.mobile .projectimage {
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.mobile .projecttext {
+  width: 100%;
+  margin-top: 4%;
+  border-bottom: 0;
+}
+
+.mobile .projecttext p{
+  width: 100%;
+}
