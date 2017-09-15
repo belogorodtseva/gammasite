@@ -1,8 +1,11 @@
 /*swiper*/
 .swiper {
   width: 100%;
-  height: auto;
+
+  margin:0;
   margin-top: 4%;
+
+
 }
 .swiper-container {
   width: 100%;

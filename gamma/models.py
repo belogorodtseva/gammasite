@@ -13,6 +13,13 @@ class Services(models.Model):
     def __str__(self):
         return self.name
 
+class ServicesSecond(models.Model):
+    name = models.CharField(max_length=20)
+    photo = models.FileField(null=False)
+    service = models.ForeignKey(Services, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
+
 
 class Projects(models.Model):
     name = models.CharField(max_length=250)
