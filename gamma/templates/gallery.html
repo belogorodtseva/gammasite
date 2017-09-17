@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block headin %}
+
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/projects.css' %}" type = "text/css"/>
+{% endblock %}
+
+{% block content %}
+
+ <div class="projects">
+
+     {% for G in Gallery %}
+
+     <div class="col-sm-4">
+
+         <div class="projectname" style="background-image:url({{ G.photo.url }});">
+
+           <div class="projectcontent">
+           <a href="{% url 'photogallery' pk=G.pk %}" class="biga"> {{G.name}} </a>
+         </div>
+
+         </div>
+
+     </div>
+     {% endfor %}
+
+ </div>
+
+
+{% endblock %}

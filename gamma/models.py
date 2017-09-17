@@ -53,13 +53,24 @@ class News(models.Model):
 
 class Gallery(models.Model):
 
+    name = models.CharField(max_length=250, blank=True, null=True)
     photo = models.FileField(null=True)
-    project = models.ForeignKey(Projects)
+    top = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.project
+        return self.name
 
 class Image(models.Model):
    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
    photo = models.FileField(blank=True, null=True)
    text = models.TextField(blank=True, null=True)
+
+class ImageGallery(models.Model):
+
+   gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE)
+   photo = models.FileField(blank=True, null=True)
+
+
+class HomePhoto(models.Model):
+
+    photo = models.FileField(blank=True, null=True)
