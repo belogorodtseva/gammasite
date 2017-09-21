@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
   <link rel="stylesheet" href="{% static 'css/swiper.css' %}" type = "text/css"/>
   <link rel="stylesheet" href="{% static 'css/all.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/models.css' %}" type = "text/css"/>
   <link href="http://allfont.ru/allfont.css?fonts=futuris-cyrillic" rel="stylesheet" type="text/css" />
   <link href="http://allfont.ru/allfont.css?fonts=avantgardectt" rel="stylesheet" type="text/css" />
 
@@ -33,6 +34,42 @@
     <img src="{% static 'img/logo_gamma.png' %}" id = 'blabla'>
   </div></center></div>
 
+<div class="models">
+  {% for M in Models %}
+
+
+
+      <div class="modelsitem" style="background-image:url({{ M.photo.url }});">
+
+
+
+
+
+      </div>
+
+
+  {% endfor %}
+
+</div>
+
+<div class="models-l">
+  {% for M in Models %}
+
+
+
+      <div class="modelsitem-l" style="background-image:url({{ M.photo.url }});">
+
+
+
+
+
+      </div>
+
+
+  {% endfor %}
+
+</div>
+
 
   <header>
     <div class="wrapper">
@@ -42,6 +79,31 @@
 
         {% block title %}
         {% endblock %}
+      </div>
+      <div class="menulistdesk">
+        <nav class="menunavdesk">
+          <ul class="menulistd">
+            <li class="menuitemdesk">
+              <a href="/projects/">Проекты</a>
+            </li>
+            <li class="menuitemdesk">
+              <a href="/news/">Новости</a>
+            </li>
+            <li class="menuitemdesk">
+              <a href="/services/">Услуги</a>
+            </li>
+            <li class="menuitemdesk">
+              <a href="/gallery/">Галерея</a>
+            </li>
+            <li class="menuitemdesk">
+              <a href="/contact/">О нас</a>
+            </li>
+            <li class="menuitemdesk">
+              <a href="/contact/">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
       </div>
       <div class="logo">
         <a href="/">
@@ -117,7 +179,7 @@
   </footer>
 
 
-
+    <script src="/static/js/swiper.min.js"></script>
 
     <!-- jQuery -->
     <script src="/static/js/jquery.js"></script>
@@ -126,6 +188,7 @@
     <script src="/static/js/bootstrap.min.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
+
 
 
     <!-- Initialize Swiper -->

@@ -54,6 +54,7 @@ a:hover {
 
 header {
   margin-top: 3%;
+
 }
 
 .ipad header, .ipad section{
@@ -104,11 +105,16 @@ header h1:hover{
 
   float: right;
   display: inline-block;
+  width: 20%;
 
 }
 
+.logo a{
+  float: right;
+}
+
 .logo img{
-  height: 7vh;
+  height: 8vh;
   vertical-align: middle;
   cursor: pointer;
   margin-top: -2vh;
@@ -163,6 +169,43 @@ header h1:hover{
 }
 
 /*        menu           */
+
+.desktop .menubutton{
+  display: none;
+}
+
+.mobile .menulistdesk, .ipad .menulistdesk{
+  display: none;
+}
+
+.desktop .menulistdesk{
+  width: 79%;
+  float: left;
+  margin-bottom: 2%;
+}
+
+.desktop .menulistdesk li{
+  display: inline;
+  margin-right: 3%;
+  font-size: 1.3vw;
+  text-transform: uppercase;
+  padding: 10px;
+
+}
+
+.desktop .menulistdesk li a{
+  text-decoration: none;
+}
+
+.desktop .menulistdesk li:hover{
+  border: 2px solid black;
+
+  padding: 8px;
+
+
+}
+
+
 
 .menu{
   position: fixed;
@@ -226,6 +269,8 @@ header h1:hover{
 
 
 /*         maincontent           */
+
+
 
 
 
@@ -304,4 +349,9 @@ footer p, footer h1{
 
 .links img:hover{
   opacity: 1;
+}
+
+.pagination {
+    width: 100%;
+    text-align: center;
 }

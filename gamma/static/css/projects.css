@@ -3,6 +3,7 @@
     list-style: none; /* Remove list bullets */
     font-size: 2vh;
     font-weight: 900;
+    display: inline;
 
 }
 

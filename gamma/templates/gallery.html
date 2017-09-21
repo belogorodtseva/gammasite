@@ -11,7 +11,7 @@
 
  <div class="projects">
 
-     {% for G in Gallery %}
+     {% for G in contacts %}
 
      <div class="col-sm-4">
 
@@ -25,6 +25,22 @@
 
      </div>
      {% endfor %}
+
+     <div class="pagination">
+        <span class="step-links">
+            {% if contacts.has_previous %}
+                <a href="?page={{ contacts.previous_page_number }}">назад</a>
+            {% endif %}
+
+            <span class="current">
+                страница {{ contacts.number }} из {{ contacts.paginator.num_pages }}
+            </span>
+
+            {% if contacts.has_next %}
+                <a href="?page={{ contacts.next_page_number }}">вперед</a>
+            {% endif %}
+        </span>
+    </div>
 
  </div>
 

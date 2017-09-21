@@ -15,12 +15,6 @@
     <li class="modelitem">
       <a href="/projects/">{{M.name}}</a>
     </li>
-    <li class="modelitem">
-      <a href="/projects/">{{M.name}}</a>
-    </li>
-    <li class="modelitem">
-      <a href="/projects/">{{M.name}}</a>
-    </li>
     {% endfor %}
   </ul>
 </div>
@@ -46,83 +40,21 @@
 
      {% endfor %}
 
-     {% for P in Projects %}
+     <div class="pagination">
+        <span class="step-links">
+            {% if Projects.has_previous %}
+                <a href="?page={{ Projects.previous_page_number }}">назад</a>
+            {% endif %}
 
-     <div class="col-sm-4">
+            <span class="current">
+                страница {{ Projects.number }} из {{ Projects.paginator.num_pages }}
+            </span>
 
-         <div class="projectname" style="background-image:url({{ P.photo.url }});">
-           <div class="projectcontent">
-           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
-           <a class="smalla" href="/projects/">{{P.model}}</a>
-         </div>
-         </div>
-
-     </div>
-
-     {% endfor %}
-
-     {% for P in Projects %}
-
-     <div class="col-sm-4">
-
-         <div class="projectname" style="background-image:url({{ P.photo.url }});">
-           <div class="projectcontent">
-           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
-           <a class="smalla" href="/projects/">{{P.model}}</a>
-         </div>
-         </div>
-
-     </div>
-
-     {% endfor %}
-     {% for P in Projects %}
-
-     <div class="col-sm-4">
-
-         <div class="projectname" style="background-image:url({{ P.photo.url }});">
-
-           <div class="projectcontent">
-           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
-           <a class="smalla" href="/projects/">{{P.model}}</a>
-         </div>
-
-         </div>
-
-
-     </div>
-
-
-     {% endfor %}
-
-     {% for P in Projects %}
-
-     <div class="col-sm-4">
-
-         <div class="projectname" style="background-image:url({{ P.photo.url }});">
-           <div class="projectcontent">
-           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
-           <a class="smalla" href="/projects/">{{P.model}}</a>
-         </div>
-         </div>
-
-     </div>
-
-     {% endfor %}
-
-     {% for P in Projects %}
-
-     <div class="col-sm-4">
-
-         <div class="projectname" style="background-image:url({{ P.photo.url }});">
-           <div class="projectcontent">
-           <a href="{% url 'project' pk=P.pk %}" class="biga"> {{P.name}} </a>
-           <a class="smalla" href="/projects/">{{P.model}}</a>
-         </div>
-         </div>
-
-     </div>
-
-     {% endfor %}
+            {% if Projects.has_next %}
+                <a href="?page={{ Projects.next_page_number }}">вперед</a>
+            {% endif %}
+        </span>
+    </div>
 
 
  </div>

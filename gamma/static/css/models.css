@@ -1,0 +1,54 @@
+.models{
+
+  position: fixed;
+  right: 0;
+  width: 7vw;
+  height: 100%;
+  top:7vh;
+
+}
+
+.modelsitem {
+  margin: 1vw;
+  width: 5vw;
+  height: 5vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+.modelsitem:hover {
+
+  opacity: 1;
+}
+
+
+.models-l{
+
+  position: fixed;
+  left: 0;
+  width: 7vw;
+  height: 100%;
+  top:7vh;
+
+}
+
+.modelsitem-l {
+  margin: 1vw;
+  width: 5vw;
+  height: 5vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+.modelsitem-l:hover {
+
+  opacity: 1;
+}
+
+.mobile .models, .mobile .models-l, .ipad .models, .ipad .models-l {
+  display: none;
+}
