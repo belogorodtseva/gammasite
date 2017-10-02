@@ -191,7 +191,7 @@ header h1:hover{
   text-transform: uppercase;
   padding: 10px;
   font-weight: 600;
-
+  z-index: 150;
 }
 
 .desktop .menulistdesk li a{
@@ -207,6 +207,36 @@ header h1:hover{
 
 }
 
+
+.menulistd .sub-menu {
+    position: absolute;
+    left: -2px;
+    display: none;
+    width: 15vw;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    z-index: 100;
+    padding-top: 0px;
+    border: 2px solid #000;
+
+
+}
+
+.menulistd .sub-menu li {
+      margin: -2px;
+      display: block;
+      font-size: 0.9vw;
+}
+
+.menulistd > li:hover .sub-menu {
+    display: block;
+}
+
+.menulistd > li {
+  position: relative;
+}
 
 
 .menu{
@@ -245,12 +275,22 @@ header h1:hover{
       margin-left: 5%;
 }
 
-.menu ul li{
+.menu ul .menuitem{
       line-height: 150%;
-      font-size: 7.5vh;
-      font-weight: 600;
+      font-size: 4.5vh;
+      font-weight: 900;
       text-transform: uppercase;
 }
+
+
+
+.sub-menu-mob li{
+  font-size: 2vh;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+
 
 .closebutton {
   width: 100%;

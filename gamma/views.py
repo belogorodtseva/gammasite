@@ -75,7 +75,8 @@ def gallery(request):
 
 def photogallery(request, pk):
     content = {
-        'Gallery' : ImageGallery.objects.filter(gallery=pk),
+        'Gallery' : Gallery.objects.filter(id=pk),
+        'Gallery_photo' : ImageGallery.objects.filter(gallery=pk),
     }
     return render(request, 'photogallery.html', content)
 

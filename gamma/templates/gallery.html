@@ -4,12 +4,12 @@
 {% block headin %}
 
   <link rel="stylesheet" href="{% static 'css/home.css' %}" type = "text/css"/>
-  <link rel="stylesheet" href="{% static 'css/projects.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/gallery.css' %}" type = "text/css"/>
 {% endblock %}
 
 {% block content %}
 
- <div class="projects">
+ <div class="projects gallerypr">
 
      {% for G in contacts %}
 
@@ -18,7 +18,7 @@
          <div class="projectname" style="background-image:url({{ G.photo.url }});">
 
            <div class="projectcontent">
-           <a href="{% url 'photogallery' pk=G.pk %}" class="biga"> {{G.name}} </a>
+           <a href="{% url 'photogallery' pk=G.pk %}" class="biga gallery"> {{G.name}} </a>
          </div>
 
          </div>

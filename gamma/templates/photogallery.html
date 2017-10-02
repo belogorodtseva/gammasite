@@ -1,0 +1,102 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block headin %}
+
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/photo.css' %}" type = "text/css"/>
+  <link rel="stylesheet" href="{% static 'css/swiper.css' %}" type = "text/css"/>
+{% endblock %}
+
+{% block content %}
+
+<!--Main Content-->
+<div class="projectname" >
+    {% for G in Gallery %}
+      <h2>{{G.name}}</h2>
+    {% endfor %}
+</div>
+<div class="line"></div>
+
+
+<div class="project" >
+      <!-- Slider main container -->
+    <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+
+
+        {% for GP in Gallery_photo %}
+        <div class="swiper-slide" style="background-image:url({{GP.gimg.url}}) ; ">
+
+
+
+
+        </div>
+        {% endfor %}
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-black"></div>
+    <!-- Navigation -->
+    <div class="swiper-button-next swiper-button-black"></div>
+    <div class="swiper-button-prev swiper-button-black"></div>
+
+
+    </div>
+</div>
+
+
+
+<div class="projectempty" >
+
+</div>
+
+<div class="projecttext" >
+  {% for G in Gallery %}
+    <h3>{{G.text}}</h3>
+  {% endfor %}
+</div>
+
+
+
+<div style="height:40px"></div>
+
+{% endblock %}
+
+{% block script %}
+<script src="/static/js/swiper.min.js"></script>
+
+<script>
+if(window.screen.width > 1000) {
+  $(document).ready(function () {
+
+
+    var swiper = new Swiper('.swiper-container', {
+         pagination: '.swiper-pagination',
+         nextButton: '.swiper-button-next',
+         prevButton: '.swiper-button-prev',
+         paginationClickable: true,
+         keyboardControl: true,
+
+         centeredSlides: true,
+         slidesPerView: 'auto',
+
+     });  });
+   }
+</script>
+
+<script>
+if(window.screen.width < 1000) {
+  $(document).ready(function () {
+    var swiper = new Swiper('.swiper-container', {
+       pagination: '.swiper-pagination',
+       nextButton: '.swiper-button-next',
+       prevButton: '.swiper-button-prev',
+       paginationClickable: true,
+
+   });  });
+   }
+</script>
+{% endblock %}

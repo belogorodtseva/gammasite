@@ -86,9 +86,16 @@ section{
 }
 
 .projectcontent{
-  position: absolute;
-      bottom: 0;
-      padding: 0 15px 15px;
+  width: 100%;
+  position: relative;
+  /* height: 40%; */
+  top: 60%;
+  height: 40%;
+  background-color: #000;
+  opacity: 0.7;
+  bottom: 0;
+  padding: 15px;
+  overflow: hidden;
 
 }
 
@@ -101,7 +108,7 @@ section{
 .projectcontent a{
   float: left;
   color: #fff;
-  text-shadow: 3px 3px 3px black, -3px -3px 3px black, -3px 3px 3px black, 3px -3px 3px black;
+  text-shadow: none;
 }
 
 .smalla{

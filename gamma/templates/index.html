@@ -76,16 +76,32 @@
               <a href="/news/">Новости</a>
             </li>
             <li class="menuitemdesk">
-              <a href="/services/">Услуги</a>
+              <a>Услуги</a>
+              <ul class="sub-menu">
+                  <li><a href="#1">VIP-салоны</a></li>
+                  <li><a href="#2">Внешний тюнинг</a></li>
+                  <li><a href="#3">Пошив салона</a></li>
+                  <li><a href="#1">Охранные и противоугонные с-мы</a></li>
+                  <li><a href="#2">Мультимедийные системы</a></li>
+                  <li><a href="#3">Дополнительное оборудование</a></li>
+                  <li><a href="#1">Тонирование, поклейка пленки</a></li>
+                  <li><a href="#2">Шумоизоляция салона</a></li>
+                  <li><a href="#3">Переоборудование трансп. ср-в</a></li>
+              </ul>
             </li>
             <li class="menuitemdesk">
               <a href="/gallery/">Галерея</a>
             </li>
             <li class="menuitemdesk">
-              <a href="/contact/">О нас</a>
+              <a>Компания</a>
+              <ul class="sub-menu">
+                  <li><a href="#1">О нас</a></li>
+                  <li><a href="#2">Контакты</a></li>
+                  <li><a href="#3">Вакансии</a></li>
+              </ul>
             </li>
             <li class="menuitemdesk">
-              <a href="/contact/">Контакты</a>
+              <a href="/contact/">Спроси нас</a>
             </li>
           </ul>
         </nav>
@@ -111,17 +127,37 @@
             <li class="menuitem">
               <a href="/news/">Новости</a>
             </li>
-            <li class="menuitem">
-              <a href="/services/">Услуги</a>
+            <li class="menuitem itembut">
+              <a>Услуги</a>
+              <div class="submob">
+              <ul class="sub-menu-mob">
+                  <li><a href="#1">VIP-салоны</a></li>
+                  <li><a href="#2">Внешний тюнинг</a></li>
+                  <li><a href="#3">Пошив салона</a></li>
+                  <li><a href="#1">Охранные и противоугонные с-мы</a></li>
+                  <li><a href="#2">Мультимедийные системы</a></li>
+                  <li><a href="#3">Дополнительное оборудование</a></li>
+                  <li><a href="#1">Тонирование, поклейка пленки</a></li>
+                  <li><a href="#2">Шумоизоляция салона</a></li>
+                  <li><a href="#3">Переоборудование трансп. ср-в</a></li>
+              </ul>
+              </div>
             </li>
             <li class="menuitem">
               <a href="/gallery/">Галерея</a>
             </li>
-            <li class="menuitem">
-              <a href="/contact/">О нас</a>
+            <li class="menuitem itembut">
+              <a>Компания</a>
+              <div class="submob">
+              <ul class="sub-menu-mob">
+                  <li><a href="#1">О нас</a></li>
+                  <li><a href="#2">Контакты</a></li>
+                  <li><a href="#3">Вакансии</a></li>
+              </ul>
+            </div>
             </li>
             <li class="menuitem">
-              <a href="/contact/">Контакты</a>
+              <a href="/contact/">Спроси нас</a>
             </li>
           </ul>
         </nav>
@@ -174,8 +210,8 @@
     <script src="/static/js/bootstrap.min.js"></script>
 
     <!-- Scrolling Nav JavaScript -->
-
-
+    {% block script %}
+    {% endblock %}
 
     <!-- Initialize Swiper -->
 
@@ -206,23 +242,28 @@
     $(document).ready(function() {
       $('.menubutton, .menu').on('click', function() {
         $('.menu')
-          .addClass('active')
+          .addClass('active');
       });
     });
 
 </script>
-
 
 <script>
 
-    $(document).ready(function() {
-      $('.closebutton, .menu').on('click', function() {
-        $('.menu')
-          .removeClass('active');
-      });
-    });
+$(document).ready(function() {
+  $('.closebutton, .menu').on('click', function() {
+    $('.menu')
+      .removeClass('active');
+  });
+});
 
 </script>
+
+
+
+
+
+
 
       <!--Preloader-->
 
